@@ -2,5 +2,24 @@
 name = "calcolo"
 version = "0.1.0"
 edition = "2024"
+description = "Write math like LaTeX, run it like a script"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/niwatoriiiiiiiii/calcolo"
+readme = "README.md"
+keywords = ["calculator", "latex", "math", "parser", "cli"]
+categories = ["command-line-utilities", "mathematics"]
 
 [dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
