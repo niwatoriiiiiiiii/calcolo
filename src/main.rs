@@ -1,3 +1,6 @@
+#![allow(missing_docs)]
+
 fn main() {
-    println!("Hello, world!");
+    let message = calcolo::greet();
+    println!("{message}");
 }
