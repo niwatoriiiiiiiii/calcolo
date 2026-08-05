@@ -16,10 +16,10 @@ fn test_tokenize_plus() {
 
 #[test]
 fn test_tokenize_float() {
-    let input = "3.14159265";
+    let input = "1.618";
     let result = tokenize(input);
 
-    assert_eq!(result, Ok(vec![Token::Number(3.14159265),]));
+    assert_eq!(result, Ok(vec![Token::Number(1.618),]));
 }
 
 #[test]
@@ -76,7 +76,7 @@ fn test_tokenize_paren() {
 #[test]
 fn test_tokenize_numbers_separated_by_newline() {
     let input = "
-            3.14
+            1.618
             1
             4.5
         ";
@@ -85,7 +85,7 @@ fn test_tokenize_numbers_separated_by_newline() {
     assert_eq!(
         result,
         Ok(vec![
-            Token::Number(3.14),
+            Token::Number(1.618),
             Token::Number(1.0),
             Token::Number(4.5),
         ])
